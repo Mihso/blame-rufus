@@ -10,12 +10,11 @@ import time
 def getInformation(directory):
     repo = Repo(directory)
     name = repo.active_branch
-    user = repo.iter_commits()
+    user = repo.iter_commits(max_count = 1)
     recentChange = False
     rufus_fault = False
     checked = False
     for t in user:
-        count += 1
         current = time.gmtime()
         dateCommit = time.gmtime(t.committed_date)
         if checked == False:
@@ -30,5 +29,5 @@ def getInformation(directory):
     print("Recent Commits: ",recentChange)
     print("Blame Rufus: ",rufus_fault)
 
-direct = "/Users/moshi/projects/project-gamma"
+direct = "/Users/moshi/projects/blame-rufus"
 getInformation(direct)
