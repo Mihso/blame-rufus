@@ -9,20 +9,18 @@ import time
 
 def getInformation(directory):
     repo = Repo(directory)
-    name = repo.active_branch
-    user = repo.iter_commits(max_count = 1)
+    name = repo.active_branch # gets name of the current branch
+    user = repo.iter_commits(max_count = 1) # only gets the the most recent commit
     recentChange = False
     rufus_fault = False
-    checked = False
     for t in user:
         current = time.gmtime()
         dateCommit = time.gmtime(t.committed_date)
-        if checked == False:
-            if current.tm_mday - dateCommit.tm_mday <= 7: # checks if most recent change happened within a week(7 days)
-                recentChange = True # returns true if so
-                if str(t.author).lower() == "rufus": # then checks if that change was made by rufus
-                    rufus_fault = True # returns true if so
-            checked = True
+        print(current, dateCommit)
+        if current.tm_mday - dateCommit.tm_mday <= 7: # checks if most recent change happened within a week(7 days)
+            recentChange = True # returns true if so
+            if str(t.author).lower() == "rufus": # then checks if that change was made by rufus
+                rufus_fault = True # returns true if so
 
     print("Active Branch: ", name)
     print("Local Changes:" , repo.is_dirty())
