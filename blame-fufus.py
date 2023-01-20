@@ -1,11 +1,5 @@
 from git import Repo
-from pathlib import Path
 import time
-
-# rorepo is a Repo instance pointing to the git-python repository.
-# For all you know, the first argument to Repo is a path to the repository
-# # you want to work with
-# tester = Path().resolve()
 
 def getInformation(directory):
     repo = Repo(directory)
@@ -14,18 +8,17 @@ def getInformation(directory):
     recentChange = False
     rufus_fault = False
     for c in commit:
-        current = time.gmtime()
+        current = time.gmtime() # get current time and date
         dateCommit = time.gmtime(c.committed_date)
-        print(current, dateCommit)
         if current.tm_mday - dateCommit.tm_mday <= 7: # checks if most recent change happened within a week(7 days)
             recentChange = True # returns true if so
             if str(c.author).lower() == "rufus": # then checks if that change was made by rufus
                 rufus_fault = True # returns true if so
 
     print("Active Branch: ", name)
-    print("Local Changes:" , repo.is_dirty())
+    print("Local Changes:" , repo.is_dirty()) # checks if there are any changes made that aren't committed and pushed
     print("Recent Commits: ",recentChange)
     print("Blame Rufus: ",rufus_fault)
 
-direct = "/Users/moshi/projects/blame-rufus"
-getInformation(direct)
+git_dir = "/Users/moshi/projects/blame-rufus"
+getInformation(git_dir)
