@@ -26,6 +26,6 @@ or clone using this method:
 ----------------------
 If you want to change what directory is checked, change the "git_dir" variable on line 30 to the desired local git repository path (using the same format shown in the example)
 
-Then, you can run the program in either vscode or whatever program can run the Python programming language.
+Then, you can run the program in either vscode or whatever program/bash/command line can run the Python programming language.
 
-I did some testing to ensure that I could acccess local git repositoty information.
+I took some time testing learning how to use GitPython and ensured that I could access local git repository information.
