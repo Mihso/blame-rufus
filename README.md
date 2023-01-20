@@ -24,7 +24,7 @@ or clone using this method:
     ./init-tests-after-clone.sh
 
 ----------------------
-If you want to change what directory is checked, change the "git_dir" variable on line 30 to the desired local git repository path (using the same format shown in the example)
+If you want to change what directory is checked, change the "git_dir" variable on line 23 to the desired local git repository path (using the same format shown in the example)
 
 Then, you can run the program in either vscode or whatever program/bash/command line can run the Python programming language.
 
