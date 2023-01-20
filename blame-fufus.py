@@ -16,7 +16,7 @@ def getInformation(directory):
                 rufus_fault = True # returns true if so
 
     print("Active Branch: ", name)
-    print("Local Changes:" , repo.is_dirty()) # checks if there are any changes made that aren't committed and pushed
+    print("Local Changes:" , repo.is_dirty()) # checks if there are any changes made that aren't committed
     print("Recent Commits: ",recentChange)
     print("Blame Rufus: ",rufus_fault)
 
