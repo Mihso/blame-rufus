@@ -1,4 +1,4 @@
-from git import Repo
+from git import Repo # comes from the GitPython package
 import time
 
 def getInformation(directory):
