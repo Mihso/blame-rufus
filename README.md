@@ -9,6 +9,7 @@ This project is made with Python and utilizes GitPython, so you would need do in
 pip install GitPython
 
 
+----------------------
 If you want to change what directory is checked, change the "direct" variable on line 30 to the desired local git repository path (using the same format shown in the example)
 
 Then, you can run the program in either vscode or whatever program can run the Python programming language.
