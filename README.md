@@ -8,16 +8,20 @@ This project is made with Python and utilizes GitPython, so you would need do in
 
 pip install GitPython
 
-if other methods are needed, you can read use:
+
+if other methods are needed, you can use:
 
 python setup.py install
 
+
 download from: http://pypi.python.org/pypi/GitPython
+
 
 or clone using this method:
     git clone https://github.com/gitpython-developers/GitPython
     git submodule update --init --recursive
     ./init-tests-after-clone.sh
+
 ----------------------
 If you want to change what directory is checked, change the "git_dir" variable on line 30 to the desired local git repository path (using the same format shown in the example)
 
