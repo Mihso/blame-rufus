@@ -4,7 +4,7 @@ pronto.ai assessment
 
 Things to do before hand:
 
-This project is made with Python and utilizes GitPython, so you would need do install it by typing in the command line:
+This project is made with Python and utilizes GitPython, so you would need to install it by typing in the command line:
 
     pip install GitPython
 
