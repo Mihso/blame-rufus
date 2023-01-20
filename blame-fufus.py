@@ -20,5 +20,5 @@ def getInformation(directory):
     print("Recent Commits: ",recentChange)
     print("Blame Rufus: ",rufus_fault)
 
-git_dir = "/Users/moshi/projects/blame-rufus"
+git_dir = "/Users/moshi/projects/blame-rufus" # equivalent to C:\Users\moshi\projects\blame-rufus
 getInformation(git_dir)
